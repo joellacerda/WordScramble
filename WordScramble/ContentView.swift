@@ -63,7 +63,7 @@ struct ContentView: View {
             return
         }
         
-        guard hasMoreThan3LettersOrMore(word: answer) else {
+        guard has3LettersOrMore(word: answer) else {
             wordError(title: "Word too small", message: "Use words that have 3 or more letters!")
             return
         }
@@ -106,7 +106,7 @@ struct ContentView: View {
         word != rootWord
     }
     
-    func hasMoreThan3LettersOrMore(word: String) -> Bool {
+    func has3LettersOrMore(word: String) -> Bool {
         word.count >= 3
     }
     
